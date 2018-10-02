@@ -11,8 +11,7 @@ def scn(num_layers=2, num_hidden=16, activation=tf.tanh):
         # Linear Control
         K = np.zeros(h.shape[0] * num_hidden)
         K_reshape = np.reshape(K, (h.shape[0], num_hidden))
-        action_l = p.matmul(K_reshape.T, h)
-        U_l = clip(action_l)
+        U_l = np.matmul(K_reshape.T, h)
 
         # Nonlinear Control - MLP
         for i in range(num_layers):
