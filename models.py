@@ -9,7 +9,7 @@ def scn(num_layers=2, num_hidden=16, activation=tf.tanh):
         h = tf.layers.flatten(X)
 
         # Linear Control
-        K = tf.get_variable('linmatrix', [h.get_shape()[1].value, num_hidden], initializer=tf.constant_initializer(1.0))
+        K = tf.get_variable('linmatrix', [h.get_shape()[1].value, num_hidden], initializer=tf.constant_initializer(0.0))
         U_l = tf.matmul(h, K)
 
         # Nonlinear Control - MLP
