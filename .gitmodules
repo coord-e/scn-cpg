@@ -3,7 +3,7 @@
 	url = https://github.com/coord-e/rlenv
 [submodule "baselines"]
 	path = baselines
-	url = https://github.com/openai/baselines
+	url = https://github.com/coord-e/baselines
 [submodule "roboschool"]
 	path = roboschool
 	url = https://github.com/openai/roboschool
