@@ -7,7 +7,7 @@ import numpy as np
 class CircularTimestepObserver(Wrapper):
     observe_circular_ts = True
 
-    def __init__(self, env, t_max=2*math.pi, t_cycle=1000):
+    def __init__(self, env, t_max=2*math.pi, t_cycle=50):
         if not isinstance(env.observation_space, Box):
             raise NotImplementedError("Use Box")
 
